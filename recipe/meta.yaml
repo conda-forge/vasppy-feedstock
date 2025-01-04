@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - check_species = vasppy.scripts.check_species:main
@@ -38,10 +38,11 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - monty
     - numpy >=1.16.2
     - pandas
@@ -59,6 +60,7 @@ test:
     - vasppy
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
