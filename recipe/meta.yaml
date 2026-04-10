@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/bjmorgan/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 0282062b7f18262cb7042d416d37b12e0f420f0f720ce1dec224f0fbdb121344
-  patches:
-    - setup.patch
 
 build:
   noarch: python
