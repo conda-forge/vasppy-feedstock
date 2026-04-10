@@ -1,19 +1,18 @@
 {% set name = "vasppy" %}
-{% set version = "0.7.1.0" %}
+{% set version = "0.7.2.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/bjmorgan/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 0b6af2b60cb99d82b63fc87d62ed74234861c100d10ebea0724cc188c4dd5747
-  patches: 
-    - setup.patch
+  url: https://github.com/bjmorgan/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: cbdfda7c17d729ebc04ca5912f85589db46af7e2a687b52b35bdf6dbdb278d16
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - check_species = vasppy.scripts.check_species:main
