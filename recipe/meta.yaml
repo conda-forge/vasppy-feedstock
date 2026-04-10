@@ -1,5 +1,5 @@
 {% set name = "vasppy" %}
-{% set version = "0.7.2.0" %}
+{% set version = "1.0.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/bjmorgan/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: cbdfda7c17d729ebc04ca5912f85589db46af7e2a687b52b35bdf6dbdb278d16
+  sha256: 0282062b7f18262cb7042d416d37b12e0f420f0f720ce1dec224f0fbdb121344
 
 build:
   noarch: python
